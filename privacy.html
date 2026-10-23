@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Privacy policy – Ticket Assistant for Freshdesk</title>
+    <meta name="description" content="How Ticket Assistant for Freshdesk handles your data." />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="page">
+      <header class="site-header">
+        <!-- Same drawing as extension/icons/icon.svg -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="32" height="32" aria-hidden="true">
+          <path fill="#2563eb" d="M28 12H100A20 20 0 0 1 120 32V80A20 20 0 0 1 100 100H58L30 121V100H28A20 20 0 0 1 8 80V32A20 20 0 0 1 28 12Z"/>
+          <path fill="#ffffff" d="M60 26C63 45 70 52 89 56C70 60 63 67 60 86C57 67 50 60 31 56C50 52 57 45 60 26Z"/>
+          <path fill="#ffffff" d="M94 25C95.5 31 97 32.5 103 34C97 35.5 95.5 37 94 43C92.5 37 91 35.5 85 34C91 32.5 92.5 31 94 25Z"/>
+        </svg>
+        <a href="index.html">Ticket Assistant</a>
+      </header>
+
+      <main>
+        <h1>Privacy policy</h1>
+        <p class="muted">Effective date: 23 October 2026</p>
+
+        <p>
+          This policy explains what the Chrome extension "Ticket Assistant for Freshdesk" does with your data.
+          The extension is free. You use it with your own API key from Anthropic or OpenAI.
+        </p>
+
+        <section class="summary" aria-label="The short version">
+          <ul>
+            <li>Everything you set up stays in your own browser.</li>
+            <li>Ticket text is sent only to the AI provider you chose, and only when you click a button.</li>
+            <li>There is no server, no analytics and no tracking. We never see your data.</li>
+            <li>No data is sold or shared with anyone.</li>
+          </ul>
+        </section>
+
+        <h2>What is stored, and where</h2>
+        <p>
+          The extension stores the following in your browser's own storage
+          (<code>chrome.storage.local</code>), on your computer only:
+        </p>
+        <ul>
+          <li>your API key, the AI provider you chose and the model name</li>
+          <li>your writing style: your name, sign-off line, tone and any example replies you add</li>
+          <li>your saved answers</li>
+          <li>
+            a count of how many times Summarize and Draft reply have worked for you, and whether you've
+            answered the "leave a review" request. This is only a number, with nothing about your tickets.
+          </li>
+        </ul>
+        <p>
+          This storage isn't synced to your other devices or your Google account, and it's never sent to us.
+          We don't have a server, so there's nowhere for it to go.
+        </p>
+
+        <h2>How ticket text is used</h2>
+        <p>
+          The extension reads the ticket you have open only when you click <strong>Summarize</strong> or
+          <strong>Draft reply</strong>. It then sends the ticket's subject and messages (private notes are left out),
+          plus your writing style, your saved answers and any instruction you typed, straight from your browser
+          to the AI provider you chose, using your API key. The answer comes back to your browser and is shown
+          in the side panel.
+        </p>
+        <p>
+          To show which ticket is open, the side panel also reads the ticket number and subject from the page.
+          These stay in your browser and aren't sent anywhere.
+        </p>
+        <p>
+          When you click <strong>Test my key</strong> in the settings, your key is sent to the provider to check
+          that it works. No ticket text is sent.
+        </p>
+        <p>
+          The extension never sends replies or changes anything in Freshdesk. It only shows a draft for you to
+          review and paste in yourself.
+        </p>
+        <p>
+          Once the provider receives a request, it handles the data under its own privacy policy and terms:
+        </p>
+        <ul>
+          <li><a href="https://www.anthropic.com/legal/privacy">Anthropic privacy policy</a></li>
+          <li><a href="https://openai.com/policies/privacy-policy/">OpenAI privacy policy</a></li>
+        </ul>
+
+        <h2>What we don't do</h2>
+        <ul>
+          <li>There is no server. The extension talks only to Freshdesk (to read the page) and to your AI provider.</li>
+          <li>No analytics, no tracking, no ads and no cookies of our own.</li>
+          <li>We don't sell, rent or share any data with anyone.</li>
+          <li>We don't load code from the internet. All the extension's code ships with it.</li>
+        </ul>
+
+        <h2>What each permission is for</h2>
+        <dl>
+          <dt><code>sidePanel</code></dt>
+          <dd>Shows the Ticket Assistant panel next to your Freshdesk tickets.</dd>
+
+          <dt><code>storage</code></dt>
+          <dd>Saves your key, settings, writing style and saved answers in your browser, as described above.</dd>
+
+          <dt>Access to <code>https://*.freshdesk.com/*</code></dt>
+          <dd>
+            Lets the extension read the ticket you have open, and turns the side panel on only on Freshdesk
+            pages. It doesn't read any other website.
+          </dd>
+
+          <dt>Access to <code>https://api.anthropic.com/*</code></dt>
+          <dd>Sends your requests to Anthropic, if you chose Anthropic.</dd>
+
+          <dt>Access to <code>https://api.openai.com/*</code></dt>
+          <dd>Sends your requests to OpenAI, if you chose OpenAI.</dd>
+        </dl>
+
+        <h2>Chrome Web Store User Data Policy</h2>
+        <p>
+          The use of information received from this extension complies with the
+          <a href="https://developer.chrome.com/docs/webstore/program-policies/user-data-faq">Chrome Web Store User Data Policy</a>,
+          including the
+          <a href="https://developer.chrome.com/docs/webstore/program-policies/limited-use">Limited Use</a>
+          requirements. Your data is used only to give you the summaries and drafts you ask for. It isn't
+          transferred to anyone except the AI provider you chose, isn't used for advertising, and isn't used to
+          decide creditworthiness or for lending.
+        </p>
+
+        <h2>How to delete your data</h2>
+        <p>
+          Remove the extension. Open <code>chrome://extensions</code>, find Ticket Assistant and click
+          <strong>Remove</strong>. Chrome then deletes everything the extension stored, including your API key.
+        </p>
+        <p>
+          To delete only your key, open the extension's settings and click <strong>Remove key</strong>.
+          For anything already sent to Anthropic or OpenAI, see their privacy policies above.
+        </p>
+
+        <h2>Changes to this policy</h2>
+        <p>
+          If this policy changes, the new version will be published on this page with a new effective date.
+        </p>
+
+        <h2>Contact</h2>
+        <p>Questions about privacy? Email SUPPORT-EMAIL.</p>
+      </main>
+
+      <footer class="site-footer">
+        <p><a href="index.html">Ticket Assistant home</a></p>
+        <p>Ticket Assistant is an independent tool and isn't made by or affiliated with Freshworks.</p>
+      </footer>
+    </div>
+  </body>
+</html>
